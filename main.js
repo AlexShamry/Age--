@@ -1,4 +1,4 @@
-Age = 0;
+let Age = 0;
 let ageLabel = document.querySelector("label");
 function SetAge() {
     Age = Number(window.prompt("what is you age?"));
@@ -25,4 +25,9 @@ document.getElementById("down").onclick = () => {
         ageLabel.textContent = `Your age is ${Age}`;
         localStorage.setItem("Age", Age);
     }
+}
+document.getElementById("reset").onclick = () => {
+    Age = 0;
+    ageLabel.textContent = `Your age is ${Age}`;
+    localStorage.setItem("Age", Age);
 }
